@@ -2,113 +2,36 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 
 const images = [
-  {id:1,
-    url: 'https://i.ibb.co/fVfg8Qxm/IMG-9874.jpg',
-    title: 'Memory 1',
-  },
-  {
-    id: 2,
-    url: 'https://i.ibb.co/RGkwB40c/1764651-A-715-E-4-C80-B34-A-8-B4-B8043-DEED-1-105-c.jpg',
-    title: 'Memory 2',
-  },
-  {
-    id: 3,
-    url: 'https://i.ibb.co/7xg8VX13/2-F3-DF2-E5-6999-4-A9-E-8456-B55-FEE087527.avif',
-    title: 'Memory 3',
-  },
-  // Priority images after spotlight
-  {
-    id: 4,
-    url: 'https://i.ibb.co/rRXXbs5W/DEB03312-4-CC9-4-A34-9-D1-E-B473-C6-BD769-D.png',
-    title: 'Memory 4',
-  },
-  {
-    id: 5,
-    url: 'https://i.ibb.co/MDdLVx2L/F22-FC022-54-E7-4-F9-B-8178-6319-ECF387-E8-4-5005-c.jpg',
-    title: 'Memory 5',
-  },
-  {
-    id: 6,
-    url: 'https://i.ibb.co/b548fDrT/B3-D9-E051-F0-D6-4-BA9-8-BE6-671-A3-B9-FC5-EB-4-5005-c.jpg',
-    title: 'Memory 6',
-  },
-  {
-    id: 7,
-    url: 'https://i.ibb.co/KCSGb9R/5-ABAFDE2-2-D19-4-FE6-9-AE1-1-FF1-D01-BBEB0-1-105-c.jpg',
-    title: 'Memory 7',
-  },
-  {
-    id: 8,
-    url: 'https://i.ibb.co/7N05wttM/0-BC686-D7-593-E-44-B9-92-A7-19-B7-F104-C212-1-105-c.jpg',
-    title: 'Memory 8',
-  },
-  {
-    id: 10,
-    url: 'https://i.ibb.co/Myhq4Zdm/94-C93-D63-53-CD-44-AF-BDFE-F6-D44-E8-CD684-4-5005-c.jpg',
-    title: 'Memory 10',
-  },
-  {
-    id: 12,
-    url: 'https://i.ibb.co/DDX2PDTT/921-B9-F10-67-D8-4946-933-D-4675-E43-EAAD0-1-105-c.jpg',
-    title: 'Memory 12',
-  },
-  {
-    id: 15,
-    url: 'https://i.ibb.co/1tpDXRK6/8646-DBC0-6461-4-CFE-B6-B6-A889217-BC0-F1-1-105-c.jpg',
-    title: 'Memory 15',
-  },
-  {
-    id: 18,
-    url: 'https://i.ibb.co/whcFWhXC/26450043-EC3-F-499-E-88-A1-40-B171442-D17-4-5005-c.jpg',
-    title: 'Memory 18',
-  },
-  {
-    id: 19,
-    url: 'https://i.ibb.co/qFRYFhQQ/73368108-6-A13-4231-B28-B-71-DBD94-ED891-4-5005-c.jpg',
-    title: 'Memory 19',
-  },
-  {
-    id: 23,
-    url: 'https://i.ibb.co/Xx8wD7vq/BB95-E464-458-E-4-B1-C-9-F52-6-ED9-BAA2-E8-B3-4-5005-c.jpg',
-    title: 'Memory 23',
-  },
-  {
-    id: 24,
-    url: 'https://i.ibb.co/cSrfYwxt/BF19199-A-FF7-A-46-FF-A6-D7-E2-E976-B3-A862-4-5005-c.jpg',
-    title: 'Memory 24',
-  },
-  {
-    id: 25,
-    url: 'https://i.ibb.co/kgys02rx/BFD50557-45-CE-47-B6-83-F3-A01-AAB8-A5877-4-5005-c.jpg',
-    title: 'Memory 25',
-  },
-  {
-    id: 27,
-    url: 'https://i.ibb.co/FbqwP9ht/D9-CF54-A7-B078-40-E5-9-F79-7-D547-F4-B9218-1-105-c.jpg',
-    title: 'Memory 27',
-  },
-  {
-    id: 28,
-    url: 'https://i.ibb.co/ynRjjG1S/DE017178-5-EB5-4-CC1-ACEF-C70-CF7-CCEAF4-1-105-c.jpg',
-    title: 'Memory 28',
-  },
-  // New images
-  {
-    id: 29,
-    url: 'https://i.ibb.co/zhhZ8TXZ/6963-CB39-832-B-4-D5-A-BDB0-CE3732365-B4-C-1-105-c.jpg',
-    title: 'Memory 29',
-  },
-  {
-    id: 30,
-    url: 'https://i.ibb.co/N22swSS4/E8-D5-FEEA-70-FE-4-E6-D-B97-B-ED9-A9-AAE6603-1-105-c.jpg',
-    title: 'Memory 30',
-  },
-  {
-    id: 32,
-    url: 'https://i.ibb.co/FkWMNDKV/30-FAA7-DF-38-C7-4-B17-B53-D-68-D027973-F34-1-105-c.jpg',
-    title: 'Memory 32',
-  },
+  { id: 1, url: `${import.meta.env.BASE_URL}home/D950685E-2189-45EB-A358-C78B8C83DC49_1_105_c.jpeg`, title: 'Memory 1' },
+  { id: 2, url: `${import.meta.env.BASE_URL}home/1764651A-715E-4C80-B34A-8B4B8043DEED_1_105_c.jpeg`, title: 'Memory 2' },
+  { id: 3, url: `${import.meta.env.BASE_URL}home/2F3DF2E5-6999-4A9E-8456-B55FEE087527_1_105_c.jpeg`, title: 'Memory 3' },
+
+  { id: 4, url: `${import.meta.env.BASE_URL}home/D4525498-5E22-4097-9E79-F2A48E071362_4_5005_c.jpeg`, title: 'Memory 4' },
+  { id: 5, url: `${import.meta.env.BASE_URL}home/38ABDEE7-D751-4B86-BC86-83A53021D96F_4_5005_c.jpeg`, title: 'Memory 5' },
+  { id: 6, url: `${import.meta.env.BASE_URL}home/1EE07EB4-72E9-47EB-961D-FB8D4098F3B0_4_5005_c.jpeg`, title: 'Memory 6' },
+
+  { id: 7, url: `${import.meta.env.BASE_URL}home/9A425A81-CFD2-4A8B-A11D-12209EA94ECF_4_5005_c.jpeg`, title: 'Memory 7' },
+  { id: 8, url: `${import.meta.env.BASE_URL}home/F22FC022-54E7-4F9B-8178-6319ECF387E8_4_5005_c.jpeg`, title: 'Memory 8' },
+
+  { id: 10, url: `${import.meta.env.BASE_URL}home/DEB03312-4CC9-4A34-9D1E-B473C6BD769D_1_105_c.jpeg`, title: 'Memory 10' },
+  { id: 12, url: `${import.meta.env.BASE_URL}home/D9CF54A7-B078-40E5-9F79-7D547F4B9218_1_105_c.jpeg`, title: 'Memory 12' },
+  { id: 15, url: `${import.meta.env.BASE_URL}home/BB95E464-458E-4B1C-9F52-6ED9BAA2E8B3_4_5005_c.jpeg`, title: 'Memory 15' },
+
+  { id: 18, url: `${import.meta.env.BASE_URL}home/6667B65E-27E3-4E9C-BBBA-FBAF800F48A7_1_105_c.jpeg`, title: 'Memory 18' },
+  { id: 19, url: `${import.meta.env.BASE_URL}home/5ABAFDE2-2D19-4FE6-9AE1-1FF1D01BBEB0_1_105_c.jpeg`, title: 'Memory 19' },
+
+  { id: 23, url: `${import.meta.env.BASE_URL}home/D2DD15D0-B35E-45D7-B4D0-52DFBE293FCB_4_5005_c.jpeg`, title: 'Memory 23' },
+  { id: 24, url: `${import.meta.env.BASE_URL}home/BF19199A-FF7A-46FF-A6D7-E2E976B3A862_4_5005_c.jpeg`, title: 'Memory 24' },
+  { id: 25, url: `${import.meta.env.BASE_URL}home/94C93D63-53CD-44AF-BDFE-F6D44E8CD684_4_5005_c.jpeg`, title: 'Memory 25' },
+
+  { id: 27, url: `${import.meta.env.BASE_URL}home/B3D9E051-F0D6-4BA9-8BE6-671A3B9FC5EB.jpeg`, title: 'Memory 27' },
+  { id: 28, url: `${import.meta.env.BASE_URL}home/6449B87B-7844-40FB-B7FD-7C2EB2F94137_4_5005_c.jpeg`, title: 'Memory 28' },
+
+  { id: 29, url: `${import.meta.env.BASE_URL}home/26450043-EC3F-499E-88A1-40B171442D17_4_5005_c.jpeg`, title: 'Memory 29' },
+  { id: 30, url: `${import.meta.env.BASE_URL}home/30FAA7DF-38C7-4B17-B53D-68D027973F34_1_105_c.jpeg`, title: 'Memory 30' },
+  { id: 32, url: `${import.meta.env.BASE_URL}home/92D466AB-BF37-41DA-8001-19F6C302138F_4_5005_c.jpeg`, title: 'Memory 32' }
 ];
+
 
 export function FilmStrip() {
   const [animationStarted, setAnimationStarted] = useState(false);

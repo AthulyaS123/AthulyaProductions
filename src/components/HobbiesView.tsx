@@ -15,73 +15,65 @@ const hobbies: Hobby[] = [
   {
     id: 1,
     title: "Travel Adventures",
-    thumbnail: "https://i.ibb.co/hFBgc1RY/1-E1-F44-A0-8-E9-D-4983-832-F-A5-A1-C5-A32-A3-D-1-105-c.jpg",
+    thumbnail: `${import.meta.env.BASE_URL}hobbies/travel/BB95E464-458E-4B1C-9F52-6ED9BAA2E8B3_4_5005_c.jpeg`,
     description: "Exploring the world one destination at a time",
     images: [
-      "https://i.ibb.co/hFBgc1RY/1-E1-F44-A0-8-E9-D-4983-832-F-A5-A1-C5-A32-A3-D-1-105-c.jpg",
-
-      "https://i.ibb.co/tPvtnLmB/2-D98-C2-B1-3144-4653-92-A1-A34-A859-E99-AC-4-5005-c.jpg",
-
-      "https://i.ibb.co/W8J6vNM/6-C664385-C62-F-4-C1-E-935-C-E52320-A1-B879-4-5005-c.jpg",
-      "https://i.ibb.co/mrwcDj0z/6-E7728-A4-EFBB-487-A-BCFE-115-B6-A195-F6-B-1-105-c.jpg",
-      "https://i.ibb.co/mVQ6gTrC/07-EF7-BC5-6-EF8-4178-8-DD9-B951704460-BB-1-105-c.jpg",
-      "https://i.ibb.co/FkWMNDKV/30-FAA7-DF-38-C7-4-B17-B53-D-68-D027973-F34-1-105-c.jpg",
-  
-      "https://i.ibb.co/BVGMX0S1/90-CADB7-E-5286-4035-9-F21-A4-C47-B701-DD4-1-105-c.jpg",
-      "https://i.ibb.co/LdFkv9xh/360-F6-F31-31-EA-41-B1-A64-E-36370136-E442-1-105-c.jpg",
-
-      "https://i.ibb.co/zhhZ8TXZ/6963-CB39-832-B-4-D5-A-BDB0-CE3732365-B4-C-1-105-c.jpg",
-      "https://i.ibb.co/0Rv2PBgG/35685-D79-5080-4-FA6-8-C1-F-3-AA0-A06-C2777-1-105-c.jpg",
-
-      "https://i.ibb.co/zW0cmSpH/458271-E4-2877-41-D9-81-D4-722-F47-C4-A2-CC-1-105-c.jpg",
-
-      "https://i.ibb.co/N22swSS4/E8-D5-FEEA-70-FE-4-E6-D-B97-B-ED9-A9-AAE6603-1-105-c.jpg"
+      `${import.meta.env.BASE_URL}hobbies/travel/45EB8450-CFB7-4BB8-8DFC-1C76BF8F26AA_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/360F6F31-31EA-41B1-A64E-36370136E442_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/921B9F10-67D8-4946-933D-4675E43EAAD0_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/1695C2E3-1375-4EA4-B11F-1EF492917204_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/6963CB39-832B-4D5A-BDB0-CE3732365B4C_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/35685D79-5080-4FA6-8C1F-3AA0A06C2777_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/9222926C-0980-48AB-A708-2A9B50E4D2EC_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/A1B4A571-2858-4BA4-B826-0EE221CAFB7B_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/A729DB24-CF7A-4802-946C-EDE729C2A8EB_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/BB95E464-458E-4B1C-9F52-6ED9BAA2E8B3_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/travel/DD3F568C-29BE-4287-8359-D58457F18960_4_5005_c.jpeg`
     ]
   },
   {
     id: 2,
     title: "Food",
-    thumbnail: "https://i.ibb.co/jnJPFyV/9-DD162-A8-B6-E1-4-A1-A-8-AC6-32-F6824608-EE-1-105-c.jpg",
+    thumbnail: `${import.meta.env.BASE_URL}hobbies/food/9DD162A8-B6E1-4A1A-8AC6-32F6824608EE_1_105_c.jpeg`,
     description: "Exploring culinary delights and flavors",
     images: [
-      "https://i.ibb.co/jnJPFyV/9-DD162-A8-B6-E1-4-A1-A-8-AC6-32-F6824608-EE-1-105-c.jpg",
-      "https://i.ibb.co/7tLrs3xY/3-A2-EE495-E8-A1-44-AA-B5-CD-D4-CCF5612-CA3-4-5005-c.jpg",
-      "https://i.ibb.co/08cd61k/8-D3-D9-B71-2-B67-4-E33-B5-A7-6-DB719-FC2-DCF-1-105-c.jpg",
-      "https://i.ibb.co/m5vNJWHb/919-D6112-491-B-4446-87-A8-A4-AF83-DEBBDD-4-5005-c.jpg",
-      "https://i.ibb.co/WW0mvR0v/1106023-E-5-E72-487-D-B5-E7-B3-EA0-AB328-A3-4-5005-c.jpg",
-      "https://i.ibb.co/jvG1C5sk/77051706-FBAD-4280-B843-9-A1-E140838-A1-4-5005-c.jpg",
-      "https://i.ibb.co/SDVvKxFV/C1412-AD0-A40-E-4-F63-9-D19-6-F55-AEFD2096-4-5005-c.jpg"
+      `${import.meta.env.BASE_URL}hobbies/food/2A9ED195-76A8-44A9-ABCE-BFB467DE75DA_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/food/3A2EE495-E8A1-44AA-B5CD-D4CCF5612CA3_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/food/8D3D9B71-2B67-4E33-B5A7-6DB719FC2DCF_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/food/9DD162A8-B6E1-4A1A-8AC6-32F6824608EE_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/food/0941CABD-6A43-42E6-B5AC-5CE679DB5A13_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/food/D55B624F-8B20-424E-A894-E5D45640382C_4_5005_c.jpeg`
     ]
   },
   {
     id: 3,
     title: "Music",
-    thumbnail: "https://i.ibb.co/BVFDm491/076-F6088-A438-4-CC8-A1-F3-DBBCDBCE9-C3-F-4-5005-c.jpg",
+    thumbnail: `${import.meta.env.BASE_URL}hobbies/music/941AA4B9-0819-41FD-BE22-231FDA208D07_1_105_c.jpeg`,
     description: "Live music and unforgettable experiences",
     images: [
-  "https://i.ibb.co/Gvtf5KyD/4-DD86988-AC82-4-CC7-B254-6-E3911-B4273-F-1-105-c.jpg",
-"https://i.ibb.co/BVFDm491/076-F6088-A438-4-CC8-A1-F3-DBBCDBCE9-C3-F-4-5005-c.jpg",
-"https://i.ibb.co/BKVBkzLP/83-DE61-BB-89-D2-4733-8-F67-DF2-F11468-A94-1-105-c.jpg",
-"https://i.ibb.co/214d3V8C/941-AA4-B9-0819-41-FD-BE22-231-FDA208-D07-1-105-c.jpg",
-"https://i.ibb.co/VYg39QHk/F78849-C5-8222-4-DE4-AAE2-6-EB9-BBC963-C4-4-5005-c.jpg"
-
+      `${import.meta.env.BASE_URL}hobbies/music/0D1B4014-2FAD-4EBA-8A0E-F8A3D0806686_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/music/2C0BF5C8-39EF-4CFE-9DA0-19AA75EF63FA_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/music/4DD86988-AC82-4CC7-B254-6E3911B4273F_1_105_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/music/076F6088-A438-4CC8-A1F3-DBBCDBCE9C3F_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/music/941AA4B9-0819-41FD-BE22-231FDA208D07_1_105_c.jpeg`
     ]
   },
   {
     id: 4,
     title: "Sports",
-    thumbnail: "https://i.ibb.co/RpZHcvCK/584778-BE-C72-F-476-C-BD73-05-D910-A35926-1-105-c.jpg",
+    thumbnail: `${import.meta.env.BASE_URL}hobbies/sports/9A70C068-645D-4CC6-9A21-582224E26694_4_5005_c.jpeg`,
     description: "Staying active and competitive",
     images: [
-      "https://i.ibb.co/v6ZBpQJ4/273-F7-D02-FD87-4-A99-BA93-C6-A9-E867-D19-B-1-105-c.jpg",
-"https://i.ibb.co/RpZHcvCK/584778-BE-C72-F-476-C-BD73-05-D910-A35926-1-105-c.jpg",
-"https://i.ibb.co/jksJHwWW/ADAC21-B6-D495-4-D1-F-90-A7-F544-A647-DCBB-1-105-c.jpg",
-"https://i.ibb.co/qFy6HDVM/DB5-A4055-779-E-4-D8-B-9-AD6-47738-F036-BE6-1-105-c.jpg",
-"https://i.ibb.co/L22Wm0S/FAFB2-EE2-9611-4407-ACD6-4-C23-DDAB5-C65-1-105-c.jpg"
-
+      `${import.meta.env.BASE_URL}hobbies/sports/2C2CFDD3-78D2-4E02-ACD3-6BDFF11FB30C_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/sports/773CD0B7-8149-447E-BEF3-08B9F91589A2_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/sports/3510D65F-1640-4627-BB12-734FB9B00848_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/sports/BB78A771-5C4F-4759-9D1F-12DA67D6B883_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/sports/9A70C068-645D-4CC6-9A21-582224E26694_4_5005_c.jpeg`,
+      `${import.meta.env.BASE_URL}hobbies/sports/EAD71439-99B4-4034-B071-3A938420B853_4_5005_c.jpeg`
     ]
   }
 ];
+
 
 interface HobbiesViewProps {
   onBack?: () => void;

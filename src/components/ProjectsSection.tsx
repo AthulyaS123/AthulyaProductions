@@ -26,35 +26,35 @@ const projects: Project[] = [
       {
     id: 1,
     title: "Equity Risk Score Audit",
-    thumbnail: "https://i.ibb.co/zW56kvDm/Screenshot-2025-12-09-at-11-48-05-PM.png",
+    thumbnail: "public/projects/Screenshot 2025-12-09 at 11.48.05 PM.png",
     videoUrl: "https://www.youtube.com/embed/zhtNhcqTih0",
     description: "Multi-Modal ML for Risk Score Assessment"
   },
     {
     id: 2,
     title: "Pose Data Visulization",
-    thumbnail: "https://i.ibb.co/0yb7K8Lf/Screenshot-2025-12-09-at-10-47-12-PM.png",
+    thumbnail: "public/projects/Screenshot 2025-12-09 at 10.47.12 PM.png",
     videoUrl: "https://www.youtube.com/embed/Wen5lScIwGM",
     description: "Real time 3D Pose Estimation and AI Data Metrics"
   },
   {
     id: 3,
     title: "Salesforce AI Engine",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=600&fit=crop",
+    thumbnail: "public/projects/Screenshot 2025-12-10 at 1.35.55 PM.png",
     videoUrl: "https://www.youtube.com/embed/q_R21nKuFo8",
     description: "Automated promotion setup, prediction, and recommendation"
   },
   {
     id: 4,
     title: "Fitify",
-    thumbnail: "https://i.ibb.co/Txmp0Tkr/Screenshot-2025-12-09-at-5-07-31-PM.png",
+    thumbnail: "public/projects/Screenshot 2025-12-09 at 5.07.31 PM.png",
     videoUrl: "https://www.youtube.com/embed/qHhgaujFGtE",
     description: "AI Powered Fashion App"
   },
   {
     id: 5,
     title: "AI/ML/Robotics",
-    thumbnail: "https://i.imghippo.com/files/kSm7983zXo.jpg",
+    thumbnail: "public/projects/Screenshot 2025-12-09 at 5.12.22 PM.png",
     description: "4 Episodes",
     episodes: [
       {
@@ -86,7 +86,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: "iReflect",
-    thumbnail: "https://i.ibb.co/jkB9Kh1m/forrestmirror.png",
+    thumbnail: "public/projects/forrestmirror.png",
     videoUrl: "https://www.youtube.com/embed/jc4m_DrqxCA",
     description: "AI and Design"
   }
