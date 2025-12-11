@@ -18,6 +18,14 @@ export function InfoCard({ onClose }: InfoCardProps) {
     );
   };
 
+    const goToLinkedIn1 = () => {
+    window.open(
+      "  https://www.linkedin.com/posts/herbkellehercenter_the-results-are-in-we-have-our-2025-freed-activity-7391226241217048576-D8wA?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxeK8BOCE2INXf1XEUCvHMn3nVihi9InM",
+      "_blank"
+    );
+  };
+
+
   const goToProjects = () => {
     const el = document.getElementById("projects-section");
     if (el) {
@@ -154,7 +162,7 @@ export function InfoCard({ onClose }: InfoCardProps) {
 
             {/* Episode 1 */}
             <div 
-              onClick={goToLinkedIn}
+              onClick={goToLinkedIn1}
               className="cursor-pointer flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group"
             >
               <div className="text-4xl text-gray-500 w-12 flex-shrink-0">1</div>
