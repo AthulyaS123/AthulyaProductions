@@ -16,7 +16,7 @@ const hobbies: Hobby[] = [
     id: 1,
     title: "Travel Adventures",
     thumbnail: `${import.meta.env.BASE_URL}hobbies/travel/BB95E464-458E-4B1C-9F52-6ED9BAA2E8B3_4_5005_c.jpeg`,
-    description: "Exploring the world one destination at a time",
+    description: "Fun Fact: Traveled to 6 countries in 3 weeks! \n I love exploring new cultures and learning about different perspectives of life. I am a life long learner so every person I meet is a valuable experience to me.",
     images: [
       `${import.meta.env.BASE_URL}hobbies/travel/45EB8450-CFB7-4BB8-8DFC-1C76BF8F26AA_4_5005_c.jpeg`,
       `${import.meta.env.BASE_URL}hobbies/travel/360F6F31-31EA-41B1-A64E-36370136E442_1_105_c.jpeg`,
@@ -141,7 +141,7 @@ export function HobbiesView({ onBack }: HobbiesViewProps) {
         )}
 
         <motion.h2
-          className="text-5xl text-white mb-8 tracking-wider relative z-10"
+          className="text-4xl text-white mb-8 tracking-wider relative z-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

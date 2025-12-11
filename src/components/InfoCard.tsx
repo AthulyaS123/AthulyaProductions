@@ -6,6 +6,34 @@ interface InfoCardProps {
 }
 
 export function InfoCard({ onClose }: InfoCardProps) {
+
+  // --------------------------
+  // Navigation Functions
+  // --------------------------
+
+  const goToLinkedIn = () => {
+    window.open(
+      "https://www.linkedin.com/posts/victoria-murillo-472974100_ksweli-sparkfounders-utaustin-activity-7404573123586535425-TSP6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxeK8BOCE2INXf1XEUCvHMn3nVihi9InM",
+      "_blank"
+    );
+  };
+
+  const goToProjects = () => {
+    const el = document.getElementById("projects-section");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      onClose(); // CLOSE OUT INFO CARD AFTER SCROLLING
+    }
+  };
+
+  const goHome = () => {
+    window.location.href = "/";
+  };
+
+  // --------------------------
+  // Component JSX
+  // --------------------------
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
@@ -25,9 +53,9 @@ export function InfoCard({ onClose }: InfoCardProps) {
         {/* Hero Section */}
         <div className="relative bg-gradient-to-b from-zinc-800 to-zinc-900">
           {/* Technology Background Image */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-19">
             <img 
-              src="https://images.unsplash.com/photo-1675495277087-10598bf7bcd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwY29kZSUyMHByb2dyYW1taW5nfGVufDF8fHx8MTc2NTI1NTkwMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={`${import.meta.env.BASE_URL}home/hi.jpeg`}
               alt="Technology background"
               className="w-full h-full object-cover"
             />
@@ -47,12 +75,14 @@ export function InfoCard({ onClose }: InfoCardProps) {
 
           {/* Title & Info */}
           <div className="relative p-8 pt-16 pb-6">
+            
             <motion.h2
               className="text-5xl text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
+              
               About Me
             </motion.h2>
 
@@ -63,11 +93,16 @@ export function InfoCard({ onClose }: InfoCardProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="group relative flex items-center gap-2 px-6 py-3 bg-white hover:bg-white/90 text-black rounded transition-all backdrop-blur-md shadow-lg hover:scale-105">
+              {/* PLAY BUTTON — GO HOME */}
+              <button 
+                onClick={goHome}
+                className="group relative flex items-center gap-2 px-6 py-3 bg-white hover:bg-white/90 text-black rounded transition-all backdrop-blur-md shadow-lg hover:scale-105"
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Play className="w-5 h-5 relative z-10" fill="currentColor" />
                 <span className="relative z-10">Play</span>
               </button>
+
               <button className="group relative w-11 h-11 bg-zinc-800/80 hover:bg-zinc-700 backdrop-blur-md border-2 border-gray-500 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full" />
                 <Plus className="w-6 h-6 text-white relative z-10" />
@@ -118,11 +153,14 @@ export function InfoCard({ onClose }: InfoCardProps) {
             </div>
 
             {/* Episode 1 */}
-            <div className="flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group">
+            <div 
+              onClick={goToLinkedIn}
+              className="cursor-pointer flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group"
+            >
               <div className="text-4xl text-gray-500 w-12 flex-shrink-0">1</div>
               <div className="w-32 h-20 bg-zinc-700 rounded overflow-hidden flex-shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1751666526244-40239a251eae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJpbmclMjBjb21tdW5pdHklMjBzZXJ2aWNlfGVufDF8fHx8MTc2NTI1Nzg0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={`${import.meta.env.BASE_URL}home/volunteer.jpeg`}
                   alt="Volunteering"
                   className="w-full h-full object-cover"
                 />
@@ -138,11 +176,14 @@ export function InfoCard({ onClose }: InfoCardProps) {
             </div>
 
             {/* Episode 2 */}
-            <div className="flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group">
+            <div 
+              onClick={goToProjects}
+              className="cursor-pointer flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group"
+            >
               <div className="text-4xl text-gray-500 w-12 flex-shrink-0">2</div>
               <div className="w-32 h-20 bg-zinc-700 rounded overflow-hidden flex-shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1562758778-e5638b5b6607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb2JvdGljcyUyMGNvbXBldGl0aW9uJTIwdW5pdmVyc2l0eXxlbnwxfHx8fDE3NjUzMDYxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={`${import.meta.env.BASE_URL}projects/c.jpeg`}
                   alt="Robotics at UT Austin"
                   className="w-full h-full object-cover"
                 />
@@ -158,25 +199,30 @@ export function InfoCard({ onClose }: InfoCardProps) {
             </div>
 
             {/* Episode 3 */}
-            <div className="flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group">
+            <div 
+              onClick={goToLinkedIn}
+              className="cursor-pointer flex gap-4 mb-6 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors group"
+            >
               <div className="text-4xl text-gray-500 w-12 flex-shrink-0">3</div>
-              <div className="w-32 h-20 bg-zinc-700 rounded overflow-hidden flex-shrink-0">
+                <div className="w-32 h-20 bg-zinc-700 rounded overflow-hidden flex-shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1599592187465-6dc742367282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwcGl0Y2glMjBwcmVzZW50YXRpb258ZW58MXx8fHwxNjUyODYxNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={`${import.meta.env.BASE_URL}home/hey.jpeg`}
                   alt="Startup Presentation"
                   className="w-full h-full object-cover"
                 />
-              </div>
+                </div>
               <div className="flex-1">
                 <h4 className="text-white mb-2">Impact-Oriented</h4>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   As a junior at UT Austin studying Computer Science and Entrepreneurship, I hone my 
-                  skills as the founder/CTO of Apovo, where I&apos;m building an AI-powered healthcare navigator.
+                  skills as the founder/CTO of Apovo, where I'm building an AI-powered healthcare navigator.
                 </p>
               </div>
               <div className="text-gray-500 text-sm flex-shrink-0">8m</div>
             </div>
           </div>
+
+          {/* ==== Rest of your file remains unchanged ==== */}
 
           <div className="grid grid-cols-3 gap-6">
             {/* Left Column - Description */}

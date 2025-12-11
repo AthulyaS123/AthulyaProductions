@@ -7,7 +7,7 @@ const images = [
   { id: 3, url: `${import.meta.env.BASE_URL}home/2F3DF2E5-6999-4A9E-8456-B55FEE087527_1_105_c.jpeg`, title: 'Memory 3' },
 
   { id: 4, url: `${import.meta.env.BASE_URL}home/D4525498-5E22-4097-9E79-F2A48E071362_4_5005_c.jpeg`, title: 'Memory 4' },
-  { id: 5, url: `${import.meta.env.BASE_URL}home/38ABDEE7-D751-4B86-BC86-83A53021D96F_4_5005_c.jpeg`, title: 'Memory 5' },
+  { id: 5, url: `${import.meta.env.BASE_URL}home/hii.jpeg`, title: 'Memory 5' },
   { id: 6, url: `${import.meta.env.BASE_URL}home/1EE07EB4-72E9-47EB-961D-FB8D4098F3B0_4_5005_c.jpeg`, title: 'Memory 6' },
 
   { id: 7, url: `${import.meta.env.BASE_URL}home/9A425A81-CFD2-4A8B-A11D-12209EA94ECF_4_5005_c.jpeg`, title: 'Memory 7' },
@@ -39,7 +39,7 @@ export function FilmStrip() {
   
   // Spotlight image (id 3) - calculate initial position to center it
   const spotlightImageIndex = 2; // id 3 is at index 1
-  const imageWidth = 280; // Reduced from 360px
+  const imageWidth = 245; // Reduced from 360px
   const gap = 12; // Reduced from 16px
   const initialOffset = -(spotlightImageIndex * (imageWidth + gap)) + (typeof window !== 'undefined' ? window.innerWidth / 2 - imageWidth / 2 : 400);
   
@@ -51,12 +51,12 @@ export function FilmStrip() {
     // Start fading out spotlight
     const fadeTimer = setTimeout(() => {
       setSpotlightFading(true);
-    }, 2500); // Start fading at 2.5 seconds
+    }, 1800); // Start fading at 2.5 seconds
     
     // Start scroll animation
     const scrollTimer = setTimeout(() => {
       setAnimationStarted(true);
-    }, 3500); // Start scrolling at 3.5 seconds
+    }, 2200); // Start scrolling at 3.5 seconds
 
     return () => {
       clearTimeout(fadeTimer);
@@ -65,20 +65,20 @@ export function FilmStrip() {
   }, []);
 
   return (
-    <div className="w-full py-6 relative">
+    <div className="w-full py-5 relative">
       {/* Film strip perforations (top) */}
-      <div className="absolute top-0 left-0 right-0 h-6 bg-zinc-900 flex items-center justify-around z-10 border-b border-zinc-800">
+      {/* <div className="absolute top-0 left-0 right-0 h-6 bg-zinc-900 flex items-center justify-around z-10 border-b border-zinc-800">
         {Array.from({ length: 50 }).map((_, i) => (
           <div key={`perf-top-${i}`} className="w-3 h-3 bg-zinc-700 rounded-sm" />
         ))}
-      </div>
+      </div> */}
 
       {/* Film strip perforations (bottom) */}
-      <div className="absolute bottom-0 left-0 right-0 h-6 bg-zinc-900 flex items-center justify-around z-10 border-t border-zinc-800">
+      {/* <div className="absolute bottom-0 left-0 right-0 h-6 bg-zinc-900 flex items-center justify-around z-10 border-t border-zinc-800">
         {Array.from({ length: 50 }).map((_, i) => (
           <div key={`perf-bottom-${i}`} className="w-3 h-3 bg-zinc-700 rounded-sm" />
         ))}
-      </div>
+      </div> */}
 
       {/* Scrolling images container */}
       <div className="overflow-hidden relative">
@@ -108,7 +108,7 @@ export function FilmStrip() {
                 className="flex-shrink-0 relative group"
                 style={{ 
                   width: `${imageWidth}px`,
-                  height: '180px',
+                  height: '150px',
                   zIndex: isSpotlight ? 50 : 1 
                 }}
                 initial={{ scale: 1, opacity: 1 }}

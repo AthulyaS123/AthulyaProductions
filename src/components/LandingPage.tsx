@@ -1,3 +1,92 @@
+// import { useState, useEffect } from 'react';
+// import { Play } from 'lucide-react';
+
+// interface LandingPageProps {
+//   onComplete: () => void;
+// }
+
+// export function LandingPage({ onComplete }: LandingPageProps) {
+//   const [fadeOut, setFadeOut] = useState(false);
+
+//   const handleEnter = () => {
+//     setFadeOut(true);
+//     setTimeout(() => {
+//       onComplete();
+//     }, 800);
+//   };
+
+//   return (
+//     <div
+//       className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-800 ${
+//         fadeOut ? 'opacity-0' : 'opacity-100'
+//       }`}
+//     >
+//       {/* Animated red glow background */}
+//       <div className="absolute inset-0 overflow-hidden">
+//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] animate-pulse" />
+//       </div>
+
+//       <div className="relative z-10 text-center space-y-12 px-4">
+//         {/* Logo/Name */}
+//         <div className="space-y-4">
+//           <h1 className="text-6xl md:text-8xl text-red-600 tracking-[0.3em] animate-fade-in">
+//             ATHULYA
+//           </h1>
+//           <p className="text-xl md:text-2xl text-gray-400 tracking-widest animate-fade-in-delay">
+//             PRODUCTIONS
+//           </p>
+//         </div>
+
+//         {/* Enter Button */}
+//         <button
+//           onClick={handleEnter}
+//           className="group relative px-12 py-5 bg-white/5 hover:bg-white/10 text-white rounded-full backdrop-blur-md transition-all duration-500 hover:scale-110 border border-white/20 shadow-2xl hover:shadow-red-500/50 animate-fade-in-delay-2"
+//         >
+//           <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+//           <span className="relative flex items-center gap-3 tracking-wider">
+//             <Play className="w-5 h-5" />
+//             ENTER
+//           </span>
+//         </button>
+
+//         {/* Tagline */}
+//         <p className="text-sm text-gray-500 tracking-widest animate-fade-in-delay-3">
+//           CREATIVE • INNOVATIVE • CINEMATIC
+//         </p>
+//       </div>
+
+//       <style>{`
+//         @keyframes fade-in {
+//           from {
+//             opacity: 0;
+//             transform: translateY(20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+
+//         .animate-fade-in {
+//           animation: fade-in 1s ease-out;
+//         }
+
+//         .animate-fade-in-delay {
+//           animation: fade-in 1s ease-out 0.3s both;
+//         }
+
+//         .animate-fade-in-delay-2 {
+//           animation: fade-in 1s ease-out 0.6s both;
+//         }
+
+//         .animate-fade-in-delay-3 {
+//           animation: fade-in 1s ease-out 0.9s both;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
 import { motion } from 'motion/react';
 import { Play } from 'lucide-react';
 
@@ -17,7 +106,11 @@ export function LandingPage({ onComplete }: LandingPageProps) {
       />
 
       {/* Multiple layered red glowing orbs */}
+             <div className="absolute inset-0 overflow-hidden">
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] animate-pulse" />
+       </div>
       <motion.div
+      
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ 
@@ -104,9 +197,11 @@ export function LandingPage({ onComplete }: LandingPageProps) {
         }}
       />
 
+
+
       {/* Radial pulse effects from center */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-red-500/10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/50 rounded-full blur-[120px] animate-pulse"
         animate={{ 
           scale: [0.8, 1.5],
           opacity: [0.3, 0]
@@ -118,7 +213,7 @@ export function LandingPage({ onComplete }: LandingPageProps) {
         }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-red-500/10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/50 rounded-full blur-[120px] animate-pulse"
         animate={{ 
           scale: [0.8, 1.5],
           opacity: [0.3, 0]
@@ -225,6 +320,7 @@ export function LandingPage({ onComplete }: LandingPageProps) {
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4">
+        
         {/* Title animation */}
         <motion.h1
           className="text-6xl md:text-8xl text-red-600 mb-8 tracking-wider"
@@ -232,7 +328,9 @@ export function LandingPage({ onComplete }: LandingPageProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          ATHULYA
+            <h1 className="text-6xl md:text-8xl text-red-600 tracking-[0.3em] animate-fade-in">
+            ATHULYA
+          </h1>
         </motion.h1>
 
         {/* Subtitle animation */}
@@ -242,14 +340,17 @@ export function LandingPage({ onComplete }: LandingPageProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <p>Heart Encourages.</p>
-          <p>Mind Envisions.</p>
-          <p>Action Transforms.</p>
+                   <p className="text-sm text-gray-500 tracking-widest animate-fade-in-delay-3">
+         CREATOR • INNOVATOR • DEVELOPER
+        </p>
         </motion.div>
+
+
+
 
         {/* CTA Button */}
         <motion.button
-          className="group relative px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded transition-all duration-500 ease-out"
+          className="group relative px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all duration-300 hover:scale-105 border border-white/20 shadow-lg hover:shadow-2xl hover:shadow-red-500/50"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ 
@@ -273,14 +374,20 @@ export function LandingPage({ onComplete }: LandingPageProps) {
           </span>
         </motion.button>
 
+        {/* CTA Button */}
+
+
+
+
+
         {/* Animated underline */}
-        <motion.div
+        {/* <motion.div
           className="mx-auto mt-16 h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: '100%', opacity: 1 }}
           transition={{ delay: 2, duration: 1.5 }}
           style={{ maxWidth: '600px' }}
-        />
+        /> */}
       </div>
 
       {/* Bottom fade effect */}

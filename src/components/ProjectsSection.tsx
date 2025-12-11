@@ -92,7 +92,7 @@ const projects: Project[] = [
     title: "iReflect",
     thumbnail: `${import.meta.env.BASE_URL}projects/forrestmirror.jpeg`,
     videoUrl: "https://www.youtube.com/embed/jc4m_DrqxCA",
-    description: "AI and Design"
+    description: "AI Avatar of the future based on current habbits"
   }
 ];
 
@@ -119,7 +119,7 @@ export function ProjectsSection() {
 
   return (
     <>
-      <div id="projects-section" className="py-20 px-8 relative">
+      <div id="projects-section" className="pt-4 pb-20 px-8 relative -mt-10">
 
         <motion.h2
           className="text-4xl text-white mb-8 tracking-wider"
