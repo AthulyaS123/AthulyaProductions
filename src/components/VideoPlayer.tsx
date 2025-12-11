@@ -105,9 +105,9 @@ export function VideoPlayer({ project, onClose }: VideoPlayerProps) {
       <motion.button
         onClick={onClose}
         className="absolute top-6 right-6 z-20 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/20"
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 2, scale: 0 }}
         animate={{ opacity: showControls || showEpisodesList ? 1 : 0, scale: showControls || showEpisodesList ? 1 : 0.8 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
         <X className="w-6 h-6 text-white" />
       </motion.button>

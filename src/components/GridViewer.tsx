@@ -43,7 +43,17 @@ export function GridViewer({ hobby, onClose }: GridViewerProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="text-4xl text-white mb-2">{hobby.title}</h2>
-        <p className="text-gray-400">{hobby.description}</p>
+
+        {/* 🔥 MULTILINE SENTENCE RENDERING — ONLY CHANGE */}
+        <div className="space-y-1 text-gray-400 leading-relaxed">
+          {hobby.description
+            .split(/(?<=[.!?])\s+/)
+            .filter((s) => s.trim().length > 0)
+            .map((sentence, index) => (
+              <p key={index}>{sentence}</p>
+            ))}
+        </div>
+        {/* 🔥 END OF CHANGE */}
       </motion.div>
 
       {/* Film Strip */}
